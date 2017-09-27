@@ -2,10 +2,13 @@
 
 import csv
 import json
-import sys                      # for .exit()
+import sys
 import re
 
 players = {}
+
+# note that 'throws' includes both bad and good throws.
+# whereas 'catches' is only good catches (didn't drop).
 
 def incr_player(player, key):
     if not player in players:
@@ -38,28 +41,12 @@ def increment_assists(player):
 def increment_scores(player):
     incr_player(player, 'scores')
 
-
-def print_player(name, stats):
-    print("{}:".format(name))
-    print("\tDefensive plays: {}".format(stats['ds']))
-    print("\tthrows: {}".format(stats['throws']))
-    print("\tbad_throws: {}".format(stats['bad_throws']))
-    if stats['throws'] > 0:
-        print("\tthrow percentage: {}".format(int(stats['bad_throws']) / int(stats['throws']) * 100))
-    print("\tcatches: {}".format(stats['catches']))
-    print("\tdrops: {}".format(stats['drops']))
-    if stats['catches'] > 0:
-        print("\tcatch percentage: {}".format(int(stats['catches']) / (int(stats['catches']) +
-                                                                     int(stats['drops'])) * 100))
-    print("\tassists: {}".format(stats['assists']))
-    print("\tscores: {}".format(stats['scores']))
-
 def usage():
     print("""Usage: {} <filename>.
        will read <filename>.json according to format described in README, 
        and will generate <filename>.csv with rows for each player and
-       columns for defensive plays, throws, bad throws, % bad throws, drops, 
-       % drops, assists, and scores.
+       columns for defensive plays, throws, bad throws, throwing percentage, drops, 
+       catch percentage, assists, and scores.
     """.format(argv[0]))
     sys.exit()
 
@@ -79,7 +66,7 @@ def main(fname):
             elif isinstance(play, list):
                 tcount = 0          # number of throws
                 player = ""
-                for t in play:
+                for t in play:  # t for "throw"
                     tcount = tcount + 1
                     prev = player
                     if isinstance(t, dict) and 'note' in t:
@@ -104,6 +91,7 @@ def main(fname):
                         increment_drops(player)
                     # bad throw:
                     elif tcount == len(play) and t == "X":
+                        player = "" # not strictly necessary 
                         increment_bad_throws(prev)
                     # a receiver who then throws
                     else:
@@ -120,14 +108,13 @@ def main(fname):
         writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
         writer.writeheader()
         for name, stats in players.items():
-            # print_player(name, stats)
             if stats['throws'] > 0:
-                stats['throw_percentage'] = (stats['bad_throws'] / stats['throws']) * 100
+                stats['throw_percentage'] = "{:.2f}".format((1 - (stats['bad_throws'] / stats['throws'])) * 100)
             else:
                 stats['throw_percentage'] = 0
             if stats['catches'] > 0:
-                stats['catch_percentage'] = (stats['catches'] / (stats['catches'] + 
-                                                                 stats['drops'])) * 100
+                stats['catch_percentage'] = "{:.2f}".format((stats['catches'] / (stats['catches'] + 
+                                                                                stats['drops'])) * 100)
             else:
                 stats['catch_percentage'] = 0
             writer.writerow(stats)
