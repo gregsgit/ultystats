@@ -1,0 +1,9 @@
+name,ds,throws,bad_throws,throw_percentage,catches,drops,catch_percentage,assists,scores
+Joel,0,28,0,100.00,28,0,100.00,0,0
+Shaun,1,28,2,92.86,28,1,96.55,0,1
+Heather,0,24,4,83.33,24,2,92.31,0,1
+Chris,0,31,4,87.10,31,1,96.88,1,2
+Fred,0,10,0,100.00,10,0,100.00,2,1
+Buzz,0,57,8,85.96,57,0,100.00,1,0
+Stephen,2,15,5,66.67,15,1,93.75,2,1
+Erika,0,21,5,76.19,21,2,91.30,0,0

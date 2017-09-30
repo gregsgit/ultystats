@@ -7,12 +7,16 @@ A stats json file looks like
     "home" : "Huckagenerians",
     "versus" : "KitKat",
     "date" : "9/15/2017",
+	"abbrevs": {"letter" : "name", ...},
     "plays" : [
 	...
 	]
   }
 }
 ```
+
+"abbrevs" are used so that I can enter single characters for player
+names, and they will be expanded in final version.
 
 ## Plays
 

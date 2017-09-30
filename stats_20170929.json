@@ -1,0 +1,88 @@
+{ "game" : {
+    "home" : "Huckagenerians",
+    "versus" : "Broken Hyperdrive",
+    "date" : "9/29/2017",
+    "abbrevs": {
+	"a": "Erika",
+	"b": "Buzz",
+	"c": "Chris",
+	"f": "Fred",
+	"h": "Heather",
+	"j": "Joel",
+	"k": "Stephen",
+	"s": "Shaun"
+    },
+    "plays" : [
+	{ "note" : "Erika and Fred(erique) were borrowed from Broken Hyperdrive (BH)."},
+	{ "note" : "Hucks receive to start game"},
+	["j", "s", "j", "h", "X"],
+	"V",
+	["j", "h", "c", "f", "h", "b", "k", "s", "b", "X"],
+	["b", "k-D"],
+	"V",
+	["b", "s", "k", "h-D"],
+	"V",
+	["s", "b", "k", "X"],
+	["c", "k", "f-!"],
+	"V",
+	["s", "c", "b", "f", "b", "c-!"], {"note":"long throw from Buzz to Chris"},
+	["j", "f", "j", "h", "s", "X"], {"note": "great D by BH"},
+	"V",
+	["j", "b", "a-D"],
+	"V",
+	["b", "j", "h", "j", "b", "h", "X"],
+	["b", "X"],
+	["b", "a", "j", "h", "c", "s", "a", "X"],
+	["D-s", "a", "j", "c", "h", "s", "a", "b", "X"],
+	["j", "k", "X"],
+	"V",
+	["s", "b", "h-D"],
+	["b", "f", "k", "X"],
+	["b", "s", "h", "X"],
+	"V",
+	{"note": "2-8 at half"},
+	["D-k", "b", "a", "h", "c", "s", "h", "s", "a", "b", "k", "b", "h", "a", "b", "a", "b", "c-D"],
+	{"note": "hard to catch throw from Buzz to Chris"},
+	"V",
+	["b", "h", "b", "j", "c", "b", "a", "b", "c", "j", "s", "X"],
+	"V",
+	["b", "s", "b", "j", "h", "j", "b", "s", "c", "s", "b", "j", "s", "h", "c", "s", "j", "c", "h", "b", "j", "b", "s", "c", "j", "h", "b", "c", "s", "c", "f", "h-!"],
+	["c", "h", "X"], {"note": "nice D by BH"},
+	["b", "c", "h", "k", "b", "c", "f", "b", "X"], {"note": "nice D by BH"},
+	["k", "X"],
+	["b", "f", "s-!"],
+	{"note": "timeout by BH"},
+	["j", "c", "a", "X"],
+	"V",
+	["b", "j", "b", "j", "c", "s", "f", "b", "c", "X"],
+	"V",
+	["j", "b", "a", "X"],
+	["c", "X"],
+	["j", "h", "b", "a-D"],
+	"V", {"note": "BH scored with heroic effort despite great D by Shaun"},
+	["b", "h", "c", "h", "k", "b", "h", "b", "h", "c", "s", "b", "X"],
+	["b", "X"],
+	"V",
+	["b", "a", "b", "c", "X"],
+	["b", "a", "c", "b", "X"],
+	["b", "a", "X"],
+	["j", "c", "b", "f", "a", "s-D"],
+	["b", "a", "c", "b", "j", "f", "c", "s", "k", "s", "k", "c-!"],
+	["j", "b", "a", "s", "c", "X"],
+	["k", "a", "X"],
+	["D-k", "s", "k", "j", "a", "b", "c", "k-!"],
+	["c", "s", "b", "X"],
+	["a", "s", "a", "k", "X"],
+	"V",
+	{"note": "final score 6-15, Broken Hyperdrive wins"}
+    ]
+}
+}
+
+	
+	
+
+
+
+    
+    
