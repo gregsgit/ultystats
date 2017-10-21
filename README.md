@@ -36,7 +36,7 @@ Each element in a sequence of throws is one of:
    threw it away (bad throw). 
 4. "name-D", to end a sequence, means the throw (from the preceding
    name) was reasonably good, but "name" dropped it.
-5. "name-!", to end a sequence, means "name" scored by recieving a
+5. "name-!", to end a sequence, means "name" scored by receiving a
    throw in the endzone. 
 
 Examples:

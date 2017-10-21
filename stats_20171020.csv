@@ -1,0 +1,8 @@
+name,ds,throws,bad_throws,throw_percentage,catches,drops,catch_percentage,assists,scores
+Joel,0,31,1,96.77,31,0,100.00,0,0
+Elgar,1,54,1,98.15,54,0,100.00,3,0
+Adam,0,37,2,94.59,37,0,100.00,2,3
+Shaun,1,41,2,95.12,41,0,100.00,0,0
+Dan,0,1,0,100.00,1,2,33.33,0,0
+Heather,0,27,0,100.00,27,1,96.43,1,0
+Duane,0,23,7,69.57,23,0,100.00,1,4
